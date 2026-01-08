@@ -50,7 +50,7 @@ RUN apt-get update && apt-get install -y jq
 ARG GOLANG_VERSION=1.17.6
 ARG GOROOT=/opt/go
 RUN mkdir -p ${GOROOT} && \
-   curl https://storage.googleapis.com/golang/go${GOLANG_VERSION}.linux-amd64.tar.gz | tar xvzf - -C ${GOROOT} --strip-components=1
+   curl https://go.dev/dl/go${GOLANG_VERSION}.linux-amd64.tar.gz | tar xvzf - -C ${GOROOT} --strip-components=1
 ### Set GO environment variables
 ENV GOROOT ${GOROOT}
 ENV GOPATH $HOME/go
